@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MovieBrain Popup</title>
+     <style>
+     body {
+        min-width: 370px;
+        overflow-x: hidden;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+    }
+     </style>
+      <script src="js/jquery-1.11.0.min.js"></script>
+      <script src="js/settings.js"></script>
+      <script src="js/popup.js"></script>
+      <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+      
+    <script src="js/bootstrap.min.js"></script>    
+    <link href="css/style-original.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+   <div id='logo-header'></div><div id='title-header-popup'><span class='h2'><strong>MovieBrain</strong></span><span class='h3'> </span></div>
+         
+        <div id='div_announcements'></div>
+  
+        <div id='div_no_user_detected'>
+            <div class="alert alert-warning"><p class="text-justify"><strong>Welcome to the Brain!</strong> To login, your IMDb username must be detected. Please refresh <a id='anyimdblink'href='http://www.imdb.com/'>any IMDb page</a> where you are logged in, and come back here...</p></div>
+        </div>
+        
+        <!-- Login form -->
+        <div id='div_login_form'>
+            <div class="alert alert-success"><strong>Alright!</strong> We have detected your IMDb username. Would you like to login now?</div>
+             <div class="btn btn-success brainbutton" id="btn_login">
+                Login as <span id='span_maybe_username'></span>
+             </div>
+        </div>
+        
+        <div id='div_logged_in'>
+            <div id='div_ratings_not_public' class="alert alert-warning"><p class="text-justify"><strong>Ratings not public?</strong> Oh Oh ... the brain has some trouble detecting your IMDb ratings. Check if they are set as public on your <a id='link_imdb_profile'  href='#'>IMDb profile</a>.</p></div>
+        <div class="btn btn-default  brainbutton" id="link_show_recommendations" data-toggle="tooltip" data-placement="right" title="See your movie recommendation list">
+             Your recommendations
+        </div>
+         <div class="btn btn-default brainbutton" id="link_rate_movies_imdb" title='Rate movies on IMDb, the more the better!'>
+            Rate movies on IMDb
+        </div>
+        <div class="btn btn-default brainbutton" id="link_feedback" title='Tell us what you think of the brain. We appreciate your feedback!'>
+            Give feedback 
+        </div>
+         <p class="text-center"><a href='#' id='link_logout'>Logout <span id='span_username'></span></a></p> 
+        </div>
+        <div id='div_loggedout'><div class="alert alert-info"><strong>Done.</strong> You have have been logged out. Hope to see you again soon!</div></div>
+        
+  </body>
+</html>
+

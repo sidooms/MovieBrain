@@ -1,0 +1,314 @@
+body {
+    background: url(../img/background_blue_pixel.png) top center;
+    background-repeat:repeat-x;
+}
+
+.popover{
+    min-width:600px;
+    /*height:250px;    */
+}
+
+
+
+
+.movie-thumbnail{
+    width:150px;
+    height:260px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    display:inline-block;
+   /*border:1px solid red;*/
+   float:left;
+   cursor: pointer;
+}
+
+.movie-thumbnail-popover {
+    display:none;
+}
+
+.movie-thumbnail-popover-close {
+    margin-top:-4px;
+}
+
+.movie-thumbnail-poster{
+    width:140px;
+    height:200px;
+    display:block;
+    margin: 2px auto;
+}
+
+.movie-thumbnail-title{
+    /*display:inline;
+    /*margin:10px;*/
+    margin-left: 10px;
+}
+
+.panel-black {
+  border-color: #000;
+}
+.panel-black > .panel-heading {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+.panel-black > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #000;
+}
+.panel-black > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #000;
+}
+
+
+#div_filters_no{
+    float:left;
+    height: 300px;
+    width: 400px;
+    border-style:solid;
+    border-width:1px;
+    margin-right: 20px;
+    margin-bottom:50px;
+    margin-top:20px;
+}
+
+.imdb-link-right{
+    float:right;   
+    margin-left: 10px;
+}
+
+.hidden{
+    display:none;
+}
+
+.more-button{
+    margin-bottom:15px;
+}
+
+#link_filters_clear{
+    margin-top: 15px;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+    width:120px;
+}
+
+.filters-cat-expl-yes{
+    color: #5bb75b;
+}
+
+.green{
+    color: #5bb75b;
+}
+
+.filters-cat-expl-no{
+    color: #d8524e;
+}
+
+.drag-genre{
+    margin:3px;
+}
+
+.center{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 820px;
+    height: 300px;
+}
+
+#div_filters_yes{
+    float:left;
+    height: 300px;
+    width: 400px;
+    border-style:solid;
+    border-width:1px;
+    margin-top:20px;
+}
+
+
+
+ 
+#logo-header {
+    height: 36px;
+    background: url(../img/Moviebrain_logo_notext_36x36.png) top left;
+    background-repeat:no-repeat;
+    margin-top:4px;
+    margin-left: 4px;
+}
+
+#beta-label{
+    height: 36px;
+    background: url(../img/Beta_label.png) top left;
+    background-repeat:no-repeat;
+    margin-top:4px;
+    margin-left: 4px;
+    width:200px;
+    position:absolute;
+    top:0px;
+    right:0px;   
+}
+
+
+#title-header-popup{
+    margin:0px;
+    position: absolute;
+    top:7px;
+    left:50px;
+    color:white;
+}
+
+#title-header{
+    margin:0px;
+    position: absolute;
+    top:-15px;
+    left:50px;
+    color:white;
+}
+
+#div_logged_in{
+    padding-top:20px;
+}
+
+#div_no_user_detected{
+    padding-top:20px;
+}
+
+#div_login_form{
+    padding-top:20px;
+}
+
+#div_loggedout{
+   padding-top:20px;
+}
+
+.recs_up_button{
+    margin-top:5px;
+    margin-bottom:15px;
+    /* margin-left: auto;
+    margin-right: auto;*/
+     /*display: ;*/
+     /*float:center;*/
+    margin-right: 15px;
+}
+
+
+
+
+
+.brainbutton{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    margin-bottom:15px;
+}
+
+#plogout{
+    position: fixed;
+     bottom: -15px;
+     right: 0;
+}
+
+.thebackground{
+    background: #ececec;
+}
+
+.hidden {
+   display:none;
+}
+
+
+.toright {
+    position:relative;
+    right: -460px;
+}
+
+.row-fluid [class*="span"]{
+   min-height: 1px;
+}
+
+.img-polaroid {
+    height:150px;
+    /*width:10px*/
+    margin-left:10px;
+}
+
+.border {
+    border-style:solid;
+    border-width:1px;
+}
+
+.corner {
+    margin:-20px -10px;
+}
+
+.cancel-rating
+{
+    position: relative;
+    float:right;
+    top: -10px;
+    right: -10px;
+    padding: 4px 12px;
+}
+
+.btn-liked {
+    margin-top: 4px;
+    color:#51a351;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.movie-liked::before
+{
+    content: "Liked";
+    position: relative;
+    float:right;
+    top: -10px;
+    right: -10px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #51a351;
+    border: 1px solid #DDD;
+    color: whiteSmoke;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.movie-disliked::before
+{
+    content: "Didn't like";
+    position: relative;
+    float:right;
+    top: -10px;
+    right: -10px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #bd362f;
+    border: 1px solid #DDD;
+    color: whiteSmoke;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.resultsperpage {
+    width: 70px;
+}
+
+.movies_search_button{
+    padding-top:0px;
+    margin-left:10px;
+}
+
+.centerlabel {
+    text-align:center;
+}

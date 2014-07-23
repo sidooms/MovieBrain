@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MovieBrain -- Recommendations</title>
+    <link href="css/dragdealer.css" rel="stylesheet" media="screen">
+     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style-original.css" rel="stylesheet" media="screen">
+     <script src="js/jquery-1.11.0.min.js"></script>
+     <script src="js/settings.js"></script>
+      <script src="js/recommendations.js"></script>
+      <script src="js/dragdealer.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  </head>
+  <body>
+   <div id='logo-header'></div><div id='title-header-popup'><span class='h2'><strong>MovieBrain</strong></span><span class='h3'> - Find the right movie for you!</span></div><div id='beta-label'></div>
+   <br>
+   
+   <!-- Modal weights -->
+<div class="modal fade" id="div_modal_weights" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Personalized settings at your disposal!</h4>
+      </div>
+      <div class="modal-body">
+        <p class='text-justify'>Calculating movie suggestions is a complex process that involves a lot of different things. Here are some of the settings which are used by the brain to generate your personal recommended movie list. <strong>The sliders indicate the importance of each of the aspects</strong>. Slide them as you like!</p>
+            <div id='div_weights_status' class="alert alert-warning"></div>
+            <div id='div_weights_sliders'></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn btn-default" id="link_weights_reset" title="Let the brain set your settings automatically (will override your manual changes)">
+              Automatic settings</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="link_weights_update">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Filters -->
+<div class="modal fade" id="div_modal_filters" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Which genres do you want?</h4>
+      </div>
+      <div class="modal-body">
+        <p class='text-justify'>A static recommendation list makes no sense. You watch different types of movies in different situations, and so here you can filter your recommendation list to only contain (or not contain) movies of specific genres. <strong>Simply drag and drop the genre buttons on the exclude or the include panel</strong>.</p>
+        <div id='div_filters-status'></div>
+            <div id='div_filters'>
+                <div id='div_filters_all'></div>
+                
+                <button type="button" class="btn btn-sm btn-danger" id="link_filters_clear"> 
+                <span class="glyphicon glyphicon-trash"></span> <strong> Clear all filters</strong></button>
+                
+                <div class='center'>
+                <div id='div_filters_no' class='well'><div class='filters-cat-expl-no text-center h3'>Exclude Genres</div><p class='text-center filters-cat-expl-no'>Drag and drop genres you <strong>do not want</strong> in your recommendation list</p></div>
+                <div id='div_filters_yes' class='well'><div class='filters-cat-expl-yes text-center h3'>Include Genres</div><p class='text-center filters-cat-expl-yes'>Drag and drop genres that <strong>must be included</strong> in your recommendation list</p></div>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="link_save_filters">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+   <div class='container'>
+   <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div id='div_announcements'></div>
+        
+        <div class="panel panel-black">
+          <div class="panel-heading">
+            <h1 class="panel-title">Your movie suggestions</h1>
+          </div>
+          <div class="panel-body">
+              <div><p class='text-justify'>The brain learns from your IMDb ratings to find movies you may like. But guess what, the brain is interactive! Improve the quality of your movie suggestions by adjusting the <strong>settings</strong> and <strong>filters</strong>. Make sure you rate at least 5 movies on IMDb (more is better) and your ratings are public, the brain takes care of the rest. Have fun and <a href="#" id="link_leave_feedback">leave some feedback</a> to support <a href="http://twitter.com/sidooms">Simon</a>'s research.</p></div>
+             <button type="button" class="btn btn-default recs_up_button" id='link_refresh_recommendations' data-toggle="tooltip" data-placement="bottom" title="Maybe the brain has some new suggestions for you? Click and find out">
+              <span class="glyphicon glyphicon-refresh"></span> Refresh</button>  
+              <button type="button" class="btn btn-primary recs_up_button" id="link_modal_weights" data-toggle="tooltip" data-placement="bottom" title="Do you want more popular movies? More recent movies? Adjust the settings and improve your movie suggestions"><span class="glyphicon glyphicon-tasks"></span> Settings</button>
+               <button type="button" class="btn btn-primary recs_up_button"  id="link_modal_filters" data-toggle="tooltip" data-placement="bottom" title="Which genres do you like/hate? Exclude or include them here"><span class="glyphicon glyphicon-filter"></span> Filters</button>            
+          </div>
+        </div>
+        
+        
+ 
+        <div id='div_recommendations_status' class='alert alert-warning'></div>
+        <div id='div_recommendations_info' class='alert alert-info'></div>
+ 
+        
+  
+  
+       
+    </div>
+  <div class="col-md-1"></div>
+   </div>
+   
+        
+   
+    
+   
+   </div>  
+   <div id='div_movies'></div>
+  </body>
+</html>
+
