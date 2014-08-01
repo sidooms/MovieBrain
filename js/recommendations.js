@@ -350,10 +350,14 @@ function generate_html_from_movie_id(movie_imdb_id){
                 </div> \
           </div>\
         </div> \
-        <script>$(function() { \
+        <script> \
+			$(function() { \
+				var togglePopover = function () { \
+					$(this).popover("toggle"); \
+				}; \
                 search_omdb_data("'+movie_imdb_id+'");\
                 $("#movie_thumbnail_'+movie_imdb_id+'").popover({\
-                   trigger: "click",\
+					trigger : "manual", \
                    content: function() { \
                     return $("#movie-panel-'+movie_imdb_id+'").html(); \
                     }, \
@@ -376,6 +380,8 @@ function generate_html_from_movie_id(movie_imdb_id){
                     } \
                 });\
                  $("#movie_thumbnail_'+movie_imdb_id+'").click(function() { \
+						$(".popover-dismiss").not(this).popover("hide"); \
+						$(this).popover("toggle"); \
                         $("#movie_hide_link_a_'+movie_imdb_id+'").tooltip({placement:"top", container:"body"}); \
                         $("#movie_imdb_link_a_'+movie_imdb_id+'").tooltip({placement:"top", container:"body"}); \
                         if (!is_popular){ \
