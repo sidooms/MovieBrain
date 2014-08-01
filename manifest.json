@@ -3,7 +3,7 @@
 
   "name": "MovieBrain",
   "description": "Customizable movie recommendations based on your IMDb ratings.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "homepage_url": "http://www.themoviebrain.com",
    "content_scripts": [
       {
@@ -11,9 +11,9 @@
         "js": ["js/jquery-1.11.0.min.js", "js/detectimdb.js"]
       }
    ],
-   "icons": { "16": "img/Moviebrain_logo_128x128.png",
-           "48": "img/MovieBrain_logo_notext_48x48.png",
-          "128": "img/MovieBrain_logo_notext_16x16.png" },
+   "icons": { "16": "img/MovieBrain_logo_plain_128x128.png",
+           "48": "img/MovieBrain_logo_plain_128x128.png",
+          "128": "img/MovieBrain_logo_plain_128x128.png" },
   "permissions": [
     "http://api.themoviebrain.com/",
     "storage",
@@ -23,7 +23,7 @@
     "scripts": ["js/background.js"]
   },
   "browser_action": {
-    "default_icon": "img/MovieBrain_logo_notext_16x16.png",
+    "default_icon": "img/MovieBrain_logo_plain_128x128.png",
     "default_popup": "popup.html",
     "default_title": "MovieBrain - Find the right movie for you!"
   },

@@ -1,5 +1,5 @@
 body {
-    background: url(../img/background_blue_pixel.png) top center;
+    background: url(../img/background_darkblue_pixel.png) top center;
     background-repeat:repeat-x;
 }
 
@@ -131,7 +131,7 @@ body {
  
 #logo-header {
     height: 36px;
-    background: url(../img/Moviebrain_logo_notext_36x36.png) top left;
+    background: url(../img/MovieBrain_logo_plain_36x36.png) top left;
     background-repeat:no-repeat;
     margin-top:4px;
     margin-left: 4px;
