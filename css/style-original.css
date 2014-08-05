@@ -1,6 +1,5 @@
 body {
-    background: url(../img/background_darkblue_pixel.png) top center;
-    background-repeat:repeat-x;
+    
 }
 
 .popover{
@@ -8,8 +7,18 @@ body {
     /*height:250px;    */
 }
 
+#top-header-bar{
+   position: fixed;
+right: 0;
+left: 0;
+z-index: 1030;
+background: url(../img/background_darkblue_pixel.png) top center;
+    background-repeat:repeat-x;
+}
 
-
+#non-header-content{
+    padding-top:55px;
+}
 
 .movie-thumbnail{
     width:150px;

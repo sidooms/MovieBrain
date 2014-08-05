@@ -3,7 +3,7 @@
 
   "name": "MovieBrain",
   "description": "Customizable movie recommendations based on your IMDb ratings.",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "homepage_url": "http://www.themoviebrain.com",
    "content_scripts": [
       {
